@@ -34,11 +34,24 @@ function details(row, source) {
   return bits.join('\n');
 }
 
-/** rows: status 'ok' rows from assemble(). alarms: minutes before the event. */
+/**
+ * Which events get reminders. Every row that passed the checks gets them, whatever kind
+ * Gemma gave it, because the kind is the model's guess (Bound Jam's real deadline came back
+ * as "other"). The one exception is a "start" row when the same page has a later row: an
+ * opening date is not something you need to be warned about if something comes after it.
+ */
+export function wantsReminder(row, rows) {
+  if (row.status !== 'ok') return false;
+  if (row.kind !== 'start') return true;
+  return !rows.some((o) => o !== row && o.status === 'ok' && o.utc > row.utc);
+}
+
+/** rows: rows from assemble(); only status 'ok' ones are written. alarms: minutes before the event. */
 export function buildICS(rows, { source = '', alarms = [3 * 24 * 60, 3 * 60], now } = {}) {
   const out = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//deadline-calendar//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
   const dtstamp = stamp(now || DateTime.utc());
-  rows.filter((r) => r.status === 'ok').forEach((r, i) => {
+  const ok = rows.filter((r) => r.status === 'ok');
+  ok.forEach((r, i) => {
     const end = r.utc;
     const start = end.minus({ minutes: 30 });
     out.push('BEGIN:VEVENT');
@@ -49,7 +62,7 @@ export function buildICS(rows, { source = '', alarms = [3 * 24 * 60, 3 * 60], no
     out.push(fold(`SUMMARY:${escapeText(r.name)}`));
     out.push(fold(`DESCRIPTION:${escapeText(details(r, source))}`));
     if (/^https?:\/\//.test(source)) out.push(fold(`URL:${source}`));
-    for (const a of r.kind === 'deadline' ? alarms : []) {
+    for (const a of wantsReminder(r, ok) ? alarms : []) {
       out.push('BEGIN:VALARM', 'ACTION:DISPLAY', fold(`DESCRIPTION:${escapeText(r.name)}`), `TRIGGER:-PT${a}M`, 'END:VALARM');
     }
     out.push('END:VEVENT');
@@ -58,7 +71,11 @@ export function buildICS(rows, { source = '', alarms = [3 * 24 * 60, 3 * 60], no
   return out.join('\r\n') + '\r\n';
 }
 
-/** A link that opens Google Calendar's "new event" form. Nothing is sent until you click it. */
+/**
+ * A link that opens Google Calendar's "new event" form. Nothing is sent until you click it.
+ * The form's URL has no field for reminders, so Google uses the calendar's own default
+ * notification; the 3-day and 3-hour reminders only come with the .ics file.
+ */
 export function googleLink(row, source = '') {
   const end = row.utc;
   const start = end.minus({ minutes: 30 });

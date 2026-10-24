@@ -4,7 +4,7 @@ import { findDates, findTimes, guessYear } from '../src/core/parse.js';
 import { findZone } from '../src/core/zones.js';
 import { assemble } from '../src/core/pipeline.js';
 import { fmt } from '../src/core/convert.js';
-import { buildICS, fold } from '../src/core/ics.js';
+import { buildICS, fold, wantsReminder, googleLink } from '../src/core/ics.js';
 
 const ref = (s) => { const [year, month, day] = s.split('-').map(Number); return { year, month, day }; };
 const one = (date, time = '', zone = '', kind = 'deadline') => JSON.stringify({ events: [{ name: 'x', kind, date, time, zone }] });
@@ -101,5 +101,58 @@ describe('checks', () => {
     expect(ics).toMatch(/DTEND:20261102T220000Z/);
     expect(ics.split('\r\n').every((l) => new TextEncoder().encode(l).length <= 75)).toBe(true);
     expect(fold('x'.repeat(200)).split('\r\n')).toHaveLength(3);
+  });
+});
+
+describe('reminders', () => {
+  const events = (list) => JSON.stringify({ events: list.map(([name, kind, date, time, zone]) => ({ name, kind, date, time, zone })) });
+  const vevents = (ics) => ics.split('BEGIN:VEVENT').slice(1);
+  const alarmsIn = (v) => (v.match(/BEGIN:VALARM/g) || []).length;
+
+  it('gives a row Gemma labeled "other" the same reminders as a deadline', () => {
+    const r = assemble(events([['Build Your Game', 'other', 'Nov 1', '18:00', 'CET']]), 'Nov 1, 18:00 CET', { ref: ref('2026-10-23') });
+    const v = vevents(buildICS(r.rows));
+    expect(v).toHaveLength(1);
+    expect(alarmsIn(v[0])).toBe(2);
+    expect(v[0]).toMatch(/TRIGGER:-PT4320M/);
+    expect(v[0]).toMatch(/TRIGGER:-PT180M/);
+  });
+
+  it('skips reminders only for a start date that has a later date after it', () => {
+    const page = 'Upload phase: July 31, 2026 - 29 October 2026 (1:59 PM UTC)';
+    const r = assemble(events([['Upload opens', 'start', 'July 31, 2026', '1:59 PM', 'UTC'], ['Upload closes', 'start', '29 October 2026', '1:59 PM', 'UTC']]), page, { ref: ref('2026-07-01') });
+    const ok = r.rows.filter((x) => x.status === 'ok');
+    expect(ok).toHaveLength(2);
+    expect(wantsReminder(ok[0], ok)).toBe(false);
+    expect(wantsReminder(ok[1], ok)).toBe(true);
+    const v = vevents(buildICS(r.rows));
+    expect(alarmsIn(v[0])).toBe(0);
+    expect(alarmsIn(v[1])).toBe(2);
+  });
+
+  it('keeps reminders on judging and results rows', () => {
+    const page = ['Deadline: Oct 26, 2026 @ 5:00pm EDT', 'Winners: November 04 at 4:00pm EST'].join('\n');
+    const r = assemble(events([['Deadline', 'deadline', 'Oct 26, 2026', '5:00pm', 'EDT'], ['Winners', 'results', 'November 04', '4:00pm', 'EST']]), page, { ref: ref('2026-10-20') });
+    const v = vevents(buildICS(r.rows));
+    expect(v.map(alarmsIn)).toEqual([2, 2]);
+  });
+
+  it('adds reminders to every calendar event of the recorded Bound Jam run', () => {
+    const rec = JSON.parse(fs.readFileSync('src/recorded.json', 'utf8'));
+    const ex = rec.examples.find((e) => e.id === 'bound-jam');
+    const rows = ex.chunks.flatMap((c, i) => assemble(ex.reader[i], c, { page: ex.excerpt, ref: ref(ex.ref) }).rows);
+    const v = vevents(buildICS(rows));
+    expect(v.length).toBe(rows.filter((x) => x.status === 'ok').length);
+    expect(v.length).toBeGreaterThan(0);
+    expect(v.every((e) => alarmsIn(e) === 2)).toBe(true);
+    expect(v.some((e) => /DTEND:20261101T170000Z/.test(e))).toBe(true);
+  });
+
+  it('writes each event as the 30 minutes before the deadline, and the Google link matches', () => {
+    const r = assemble(events([['Due', 'deadline', 'Nov 2, 2026', '2:00pm', 'PST']]), 'Deadline: Nov 2, 2026 @ 2:00pm PST', { ref: ref('2026-10-24') });
+    const ics = buildICS(r.rows);
+    expect(ics).toMatch(/DTSTART:20261102T213000Z/);
+    expect(ics).toMatch(/DTEND:20261102T220000Z/);
+    expect(new URL(googleLink(r.rows[0])).searchParams.get('dates')).toBe('20261102T213000Z/20261102T220000Z');
   });
 });

@@ -113,7 +113,8 @@ function showExample(ex) {
   $('text').value = ex.excerpt;
   $('text').readOnly = true;
   $('srcTag').innerHTML = `<a href="${esc(ex.url)}" target="_blank" rel="noopener">${esc(ex.site)}</a> · ${esc(ex.kind)}`;
-  $('excerptSum').textContent = `What Gemma read: ${ex.excerpt.split('\n').length} lines`;
+  const nLines = ex.excerpt.split('\n').length;
+  $('excerptSum').textContent = `What Gemma read: ${nLines} line${nLines === 1 ? '' : 's'}`;
   $('excerpt').textContent = ex.excerpt;
   runRecorded();
 }

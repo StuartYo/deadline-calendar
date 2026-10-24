@@ -79,10 +79,10 @@
       <h2>How it works</h2>
       <ol>
         <li><b>Code picks the lines.</b> A rules page can run to 40,000 characters. Code keeps the lines that contain a date, plus the short label above each one, so the model reads a few hundred characters instead of the whole page.</li>
-        <li><b>Gemma points.</b> Gemma 4 E2B, running on your GPU through WebLLM, lists each event and copies the date, the time and the zone exactly as written. Its answer is held to a grammar, so it always parses.</li>
-        <li><b>Code checks.</b> Every quote is looked up on the page. A date Gemma reworded or made up is thrown out and listed.</li>
+        <li><b>Gemma points.</b> Gemma 4 E2B, running on your GPU through WebLLM, lists each event and copies the date, the time and the zone exactly as written. Its answer is held to a grammar that puts one complete event on each line. If an answer gets cut off, code keeps the complete lines and drops the half-written last one.</li>
+        <li><b>Code checks.</b> Every quote is looked up on the page. If Gemma reworded a date, code looks for the same calendar date on the page and uses the page's words. A date that isn't on the page in any form is thrown out and listed.</li>
         <li><b>Code converts.</b> The date and time are read by plain functions, and Luxon applies the time zone database: daylight saving on that exact date, "PST" written in summer, Anywhere on Earth, missing years.</li>
-        <li><b>You get a calendar.</b> One .ics file for every event, with reminders 3 days and 3 hours before each deadline, or one Google Calendar link per row.</li>
+        <li><b>You get a calendar.</b> Each event is a block from 30 minutes before the deadline to the deadline. The .ics file puts reminders 3 days and 3 hours before every event, except a start date that has a later date after it. Each row also has a Google Calendar link; Google's link can't carry reminders, so those events get your calendar's default notification.</li>
       </ol>
       <p class="fine">The recorded runs are real outputs from Gemma 4 E2B on pages from contests I entered, saved during my test. The checker and the time zone code run live on them in your browser. Live mode needs Chrome or Edge with WebGPU and downloads about 2.8 GB once.</p>
     </section>
