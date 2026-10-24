@@ -11,9 +11,9 @@
  },
  "totals": {
   "reader": {
-   "correct": 20,
+   "correct": 22,
    "wrong": 0,
-   "missing": 2
+   "missing": 0
   },
   "baseline": {
    "correct": 3,
@@ -22,21 +22,21 @@
   }
  },
  "rates": {
-  "reader_correct": "20/22",
+  "reader_correct": "22/22",
   "baseline_correct": "3/22",
-  "reader_pct": 91,
+  "reader_pct": 100,
   "baseline_pct": 14
  },
  "reader_stats": {
-  "events": 47,
-  "rows_ok": 40,
-  "rows_no_zone": 7,
+  "events": 55,
+  "rows_ok": 43,
+  "rows_no_zone": 12,
   "dropped": 1,
   "dropped_why": [
-   "desall-horeca: Gemma quoted \"October 29, 2026\", but those words are not on the page."
+   "bound-jam: Gemma's answer was cut off (it started repeating itself). Code kept the 21 complete events."
   ],
-  "parse_fail": 1,
-  "notes": 9,
+  "parse_fail": 0,
+  "notes": 11,
   "median_ms": 11584
  },
  "baseline_stats": {
@@ -377,12 +377,15 @@
    "truth_taiwan": "2026-10-29 21:59",
    "input_kind": "original line from our page notes",
    "reader": {
-    "grade": "missing",
+    "grade": "correct",
     "times": [
-     "2026-07-31 21:59"
+     "2026-07-31 21:59",
+     "2026-10-29 21:59"
     ],
-    "matched_line": null,
-    "notes": []
+    "matched_line": "Upload phase: July 31, 2026 - 29 October 2026 (1:59 PM UTC)",
+    "notes": [
+     "Gemma wrote \"October 29, 2026\". The page writes \"29 October 2026\". Same date, so code used the page's words."
+    ]
    },
    "baseline": {
     "grade": "wrong",
@@ -445,10 +448,15 @@
    "truth_taiwan": "2026-11-02 01:00",
    "input_kind": "saved page",
    "reader": {
-    "grade": "missing",
-    "times": [],
-    "matched_line": null,
-    "notes": []
+    "grade": "correct",
+    "times": [
+     "2026-10-02 00:00",
+     "2026-11-02 01:00"
+    ],
+    "matched_line": "Nov 1, 18:00 CET",
+    "notes": [
+     "No year next to this date. Code assumed 2026."
+    ]
    },
    "baseline": {
     "grade": "wrong",
@@ -541,5 +549,31 @@
     ]
    }
   }
- ]
+ ],
+ "run1_frozen_code": {
+  "commit": "f96ac25",
+  "note": "same saved Gemma outputs, scored with the code before the fixes",
+  "totals": {
+   "reader": {
+    "correct": 20,
+    "wrong": 0,
+    "missing": 2
+   },
+   "baseline": {
+    "correct": 3,
+    "wrong": 18,
+    "missing": 1
+   }
+  },
+  "rates": {
+   "reader_correct": "20/22",
+   "baseline_correct": "3/22",
+   "reader_pct": 91,
+   "baseline_pct": 14
+  },
+  "reader_misses": [
+   "desall-horeca",
+   "bound-jam"
+  ]
+ }
 }

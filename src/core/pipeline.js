@@ -11,7 +11,15 @@ export function parseJSON(text) {
   const a = text.indexOf('{');
   const b = text.lastIndexOf('}');
   if (a >= 0 && b > a) { try { return JSON.parse(text.slice(a, b + 1)); } catch {} }
-  return null;
+  // The grammar puts one event per line. If Gemma got stuck repeating itself and ran out of
+  // tokens, the JSON never closes; keep every event line that is complete on its own.
+  const events = [];
+  for (const line of text.split('\n')) {
+    const s = line.trim().replace(/,$/, '');
+    if (!s.startsWith('{"name"')) continue;
+    try { events.push(JSON.parse(s)); } catch {}
+  }
+  return events.length ? { events, truncated: true } : null;
 }
 
 const low = (s) => norm(s).toLowerCase();
@@ -36,14 +44,27 @@ export function assemble(raw, excerpt, { page = excerpt, ref, target = 'Asia/Tai
   const lines = excerpt.split('\n').map(norm);
   const rows = [];
   const dropped = [];
+  if (parsed?.truncated) dropped.push({ name: 'Gemma', why: `Gemma's answer was cut off (it started repeating itself). Code kept the ${events.length} complete events.` });
 
   for (const e of events) {
-    const dq = norm(e.date);
+    let dq = norm(e.date);
     const name = norm(e.name) || 'Date';
     if (!dq) continue;
+    const notes = [];
     if (!inText(dq, excerpt)) {
-      dropped.push({ name, why: `Gemma quoted "${e.date}", but those words are not on the page.` });
-      continue;
+      // Gemma sometimes rewrites "29 October 2026" as "October 29, 2026". If code reads the
+      // same calendar date in Gemma's words and on one line of the page, use the page's words.
+      const want = findDates(dq)[0];
+      const same = (x) => want && x.m === want.m && x.d === want.d && (x.y == null || want.y == null || x.y === want.y);
+      const hit = want && lines.map((l) => ({ l, ds: findDates(l).filter(same) })).find((h) => h.ds.length);
+      if (!hit) {
+        dropped.push({ name, why: `Gemma quoted "${e.date}", but those words are not on the page.` });
+        continue;
+      }
+      const ds = hit.ds[0];
+      const pageWords = norm(hit.l).slice(ds.index, ds.index + ds.len);
+      notes.push(`Gemma wrote "${e.date}". The page writes "${pageWords}". Same date, so code used the page's words.`);
+      dq = pageWords;
     }
     const line = lines.find((l) => low(l).includes(low(dq))) || dq;
     const lineIdx = lines.indexOf(line);
@@ -52,7 +73,6 @@ export function assemble(raw, excerpt, { page = excerpt, ref, target = 'Asia/Tai
       dropped.push({ name, why: `"${e.date}" is on the page, but code found no date in it.` });
       continue;
     }
-    const notes = [];
     const pick = e.kind === 'start' || dates.length === 1 ? dates[0] : dates[dates.length - 1];
     const datePos = low(line).indexOf(low(dq)) + pick.index;
 
@@ -99,10 +119,10 @@ export function assemble(raw, excerpt, { page = excerpt, ref, target = 'Asia/Tai
       notes.push(`No year next to this date. Code assumed ${y}.`);
     }
     const p = { y, m: pick.m, d: pick.d, hh: time.hh, mm: time.mm };
-    const row = { name, kind: e.kind || 'other', line, quote: { date: e.date, time: e.time, zone: e.zone }, written: p, notes, noTime };
+    const row = { name, kind: e.kind || 'other', line, quote: { date: dq, time: e.time, zone: e.zone }, written: p, notes, noTime };
     if (!zone) {
       row.status = 'no-zone';
-      row.notes.push('The page names no time zone for this date, so there is no way to convert it. Pick one by hand.');
+      row.notes.push('The page names no time zone for this date, so code cannot convert it and leaves it off the calendar.');
       rows.push(row);
       continue;
     }

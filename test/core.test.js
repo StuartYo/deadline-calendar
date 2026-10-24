@@ -84,6 +84,17 @@ describe('checks', () => {
     const r = assemble(one('2026年11月7日', '23時59分', ''), '投稿の締め切りは 2026年11月7日（土）23時59分', { ref: ref('2026-10-20') });
     expect(fmt(r.rows[0].local)).toBe('2026-11-07 22:59');
   });
+  it('keeps a reworded date only when the page has the same date', () => {
+    const r = assemble(one('October 29, 2026', '1:59 PM', 'UTC'), 'Upload phase: July 31, 2026 – 29 October 2026 (1:59 PM UTC)', { ref: ref('2026-10-18') });
+    expect(fmt(r.rows[0].local)).toBe('2026-10-29 21:59');
+    expect(r.rows[0].notes[0]).toMatch(/page writes "29 October 2026"/);
+  });
+  it('keeps the complete events of an answer that was cut off', () => {
+    const raw = ['{"events": [', '  {"name": "Jam ends", "kind": "deadline", "date": "Nov 1, 18:00 CET", "time": "18:00", "zone": "CET"},', '  {"name": "Loop", "kind": "other", "date": "Nov'].join('\n');
+    const r = assemble(raw, 'Nov 1, 18:00 CET', { ref: ref('2026-10-23') });
+    expect(fmt(r.rows[0].local)).toBe('2026-11-02 01:00');
+    expect(r.dropped[0].why).toMatch(/cut off/);
+  });
   it('writes a valid calendar file', () => {
     const r = assemble(one('Nov 2, 2026', '2:00pm', 'PST'), 'Deadline: Nov 2, 2026 @ 2:00pm PST', { ref: ref('2026-10-24') });
     const ics = buildICS(r.rows, { source: 'https://example.com/rules' });

@@ -85,6 +85,13 @@ const out = {
   baseline_stats: { ...baselineStats, median_ms: med(baselineStats.ms), ms: undefined },
   items,
 };
+// Run 1 was scored with the code at commit f96ac25, before the two fixes described in the README.
+const frozen = 'eval/results_run1_frozen.json';
+if (outFile !== frozen && fs.existsSync(frozen)) {
+  const f = JSON.parse(fs.readFileSync(frozen, 'utf8'));
+  out.run1_frozen_code = { commit: 'f96ac25', note: 'same saved Gemma outputs, scored with the code before the fixes', totals: f.totals, rates: f.rates,
+    reader_misses: f.items.filter((i) => i.reader.grade !== 'correct').map((i) => i.id) };
+}
 fs.writeFileSync(outFile, JSON.stringify(out, null, 1));
 console.log(JSON.stringify({ totals, rates: out.rates, reader: out.reader_stats, baseline: out.baseline_stats }, null, 1));
 for (const i of items) console.log(i.id.padEnd(20), i.truth_taiwan, 'R', i.reader.grade.padEnd(8), i.reader.times.join(',').slice(0, 60), '| B', i.baseline.grade.padEnd(8), i.baseline.times.join(',').slice(0, 70));

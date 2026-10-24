@@ -1,0 +1,150 @@
+{
+ "model": "gemma-4-E2B-it-q4f16_1-MLC",
+ "recordedOn": "2026-10-24",
+ "examples": [
+  {
+   "id": "bound-jam",
+   "label": "Bound Jam",
+   "site": "itch.io",
+   "kind": "CET, and a timer with no zone",
+   "url": "https://itch.io/jam/bound-jam-2026",
+   "ref": "2026-10-23",
+   "chunks": [
+    "Submission feed\nSubmissions open from 2026-10-01 16:52:48 to 2026-11-01 17:55:25\nOctober 1 - November 1\nSchedule\nOct 1, 18:00 CEST\nThe jam starts - EXPECT THE UNEXPECTED\nOct 1 - Nov 1\nBuild your game. You have the whole month\nNov 1, 18:00 CET\nMade during the jam\nYour game should primarily be created between October 1 and November 1.\nCan I join after the jam has started?\nYes. You can join any time before submissions close on November 1."
+   ],
+   "excerpt": "Submission feed\nSubmissions open from 2026-10-01 16:52:48 to 2026-11-01 17:55:25\nOctober 1 - November 1\nSchedule\nOct 1, 18:00 CEST\nThe jam starts - EXPECT THE UNEXPECTED\nOct 1 - Nov 1\nBuild your game. You have the whole month\nNov 1, 18:00 CET\nMade during the jam\nYour game should primarily be created between October 1 and November 1.\nCan I join after the jam has started?\nYes. You can join any time before submissions close on November 1.",
+   "reader": [
+    "{\"events\": [\n  {\"name\": \"Submission Feed\", \"kind\": \"start\", \"date\": \"2026-10-01 16:52:48 to 2026-11-01 17:55:25\", \"time\": \"16:52:48 to 17:55:25\", \"zone\": \"\"},\n  {\"name\": \"Submission Feed\", \"kind\": \"other\", \"date\": \"October 1 - November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Schedule\", \"kind\": \"event\", \"date\": \"Oct 1, 18:00 CEST\", \"time\": \"18:00\", \"zone\": \"CEST\"},\n  {\"name\": \"Jam Start\", \"kind\": \"event\", \"date\": \"Oct 1 - Nov 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Build Your Game\", \"kind\": \"other\", \"date\": \"Nov 1, 18:00 CET\", \"time\": \"18:00\", \"zone\": \"CET\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"any time before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\","
+   ],
+   "baseline": [
+    "{\"events\": [\n  {\"name\": \"Submission Open\", \"kind\": \"start\", \"taiwan_time\": \"2026-10-01 08:00\"},\n  {\"name\": \"Submission Close\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-01 09:55\"},\n  {\"name\": \"Jam Start\", \"kind\": \"event\", \"taiwan_time\": \"2026-10-01 22:00\"}\n]}"
+   ]
+  },
+  {
+   "id": "dev-week3",
+   "label": "This DEV challenge",
+   "site": "DEV",
+   "kind": "PDT, no year",
+   "url": "https://dev.to/challenges/hacktoberfest-week3-2026-10-19",
+   "ref": "2026-10-24",
+   "chunks": [
+    "- **October 19:** Hacktoberfest Open-Source AI Challenge: Week 3 begins!\n- **October 20:** International Sloth Day 🦥\n- <mark>**October 25:** Submissions due at 11:59 PM PDT</mark>\n- **Week of October 26:** Winners announced"
+   ],
+   "excerpt": "- **October 19:** Hacktoberfest Open-Source AI Challenge: Week 3 begins!\n- **October 20:** International Sloth Day 🦥\n- <mark>**October 25:** Submissions due at 11:59 PM PDT</mark>\n- **Week of October 26:** Winners announced",
+   "reader": [
+    "{\"events\": [\n  {\"name\": \"Hacktoberfest Open-Source AI Challenge\", \"kind\": \"start\", \"date\": \"October 19\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"International Sloth Day\", \"kind\": \"other\", \"date\": \"October 20\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Submissions due\", \"kind\": \"deadline\", \"date\": \"October 25\", \"time\": \"11:59 PM\", \"zone\": \"PDT\"},\n  {\"name\": \"Winners announced\", \"kind\": \"results\", \"date\": \"Week of October 26\", \"time\": \"\", \"zone\": \"\"}\n]}"
+   ],
+   "baseline": [
+    "{\"events\": [\n  {\"name\": \"Hacktoberfest Open-Source AI Challenge: Week 3 begins!\", \"kind\": \"start\", \"taiwan_time\": \"2026-10-25 11:59\"},\n  {\"name\": \"International Sloth Day\", \"kind\": \"other\", \"taiwan_time\": \"2026-10-20 00:00\"},\n  {\"name\": \"Submissions due\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-25 23:59\"}\n]}"
+   ]
+  },
+  {
+   "id": "codex-twitchcon",
+   "label": "Codex x TwitchCon",
+   "site": "Devpost",
+   "kind": "PST after the clocks change",
+   "url": "https://twitchcon-codex.devpost.com/",
+   "ref": "2026-10-24",
+   "chunks": [
+    "Deadline: Nov 2, 2026 @ 2:00pm PST\n[/rules] View full rules\nNovember 02 at 5:00pm EST to deadline\nThe top 5 projects will be showcased on the Codex Booth stage at TwitchCon San Diego on November 15, where winners will be announced live."
+   ],
+   "excerpt": "Deadline: Nov 2, 2026 @ 2:00pm PST\n[/rules] View full rules\nNovember 02 at 5:00pm EST to deadline\nThe top 5 projects will be showcased on the Codex Booth stage at TwitchCon San Diego on November 15, where winners will be announced live.",
+   "reader": [
+    "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"Nov 2, 2026\", \"time\": \"2:00pm\", \"zone\": \"PST\"},\n  {\"name\": \"Rules Viewing\", \"kind\": \"other\", \"date\": \"November 02\", \"time\": \"5:00pm\", \"zone\": \"EST\"},\n  {\"name\": \"Winner Announcement\", \"kind\": \"judging\", \"date\": \"November 15\", \"time\": \"\", \"zone\": \"San Diego\"}\n]}"
+   ],
+   "baseline": [
+    "{\"events\": [\n  {\"name\": \"Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-02 10:00\"},\n  {\"name\": \"Live Event\", \"kind\": \"event\", \"taiwan_time\": \"2026-11-15 18:00\"}\n]}"
+   ]
+  },
+  {
+   "id": "buildwithai",
+   "label": "Build With AI",
+   "site": "Devpost",
+   "kind": "EDT and EST on one page",
+   "url": "https://learn-ai-basics.devpost.com/details/dates",
+   "ref": "2026-10-15",
+   "chunks": [
+    "Deadline: Oct 26, 2026 @ 5:00pm EDT\nSubmissions\nSeptember 22 at 10:15am EDT\nOctober 26 at 5:00pm EDT\nJudging\nOctober 27 at 10:00am EDT\nOctober 30 at 5:00pm EDT\nWinners Announced\nNovember 04 at 4:00pm EST"
+   ],
+   "excerpt": "Deadline: Oct 26, 2026 @ 5:00pm EDT\nSubmissions\nSeptember 22 at 10:15am EDT\nOctober 26 at 5:00pm EDT\nJudging\nOctober 27 at 10:00am EDT\nOctober 30 at 5:00pm EDT\nWinners Announced\nNovember 04 at 4:00pm EST",
+   "reader": [
+    "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"Oct 26, 2026\", \"time\": \"5:00pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Submission Start\", \"kind\": \"start\", \"date\": \"September 22\", \"time\": \"10:15am\", \"zone\": \"EDT\"},\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"October 26\", \"time\": \"5:00pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Judging Start\", \"kind\": \"judging\", \"date\": \"October 27\", \"time\": \"10:00am\", \"zone\": \"EDT\"},\n  {\"name\": \"Judging Deadline\", \"kind\": \"judging\", \"date\": \"October 30\", \"time\": \"5:00pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Winners Announced\", \"kind\": \"results\", \"date\": \"November 04\", \"time\": \"4:00pm\", \"zone\": \"EST\"}\n]}"
+   ],
+   "baseline": [
+    "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-27 00:00\"},\n  {\"name\": \"Submission Start\", \"kind\": \"start\", \"taiwan_time\": \"2026-09-22 22:15\"}\n]}"
+   ]
+  },
+  {
+   "id": "ai-philosophy",
+   "label": "AI Philosophy essay",
+   "site": "contest site",
+   "kind": "Anywhere on Earth",
+   "url": "https://www.zacharygoodsell.com/ai-philosophy-competition",
+   "ref": "2026-10-19",
+   "chunks": [
+    "11:59pm Anywhere on Earth on October 31, 2026"
+   ],
+   "excerpt": "11:59pm Anywhere on Earth on October 31, 2026",
+   "reader": [
+    "{\"events\": [\n  {\"name\": \"Final Submission Deadline\", \"kind\": \"deadline\", \"date\": \"October 31, 2026\", \"time\": \"11:59pm\", \"zone\": \"Anywhere on Earth\"}\n]}"
+   ],
+   "baseline": [
+    "{\"events\": [\n  {\"name\": \"Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-01 07:59\"}\n]}"
+   ]
+  },
+  {
+   "id": "hacknation",
+   "label": "Hack-Nation",
+   "site": "Luma",
+   "kind": "January, read in October",
+   "url": "https://luma.com/9j6zoc6n",
+   "ref": "2026-10-14",
+   "chunks": [
+    "January 31 - 9:00 AM ET: Project submission deadline\nFebruary 6 - 12:00-1:00 PM ET: Finalist pitches and award ceremony (virtual)"
+   ],
+   "excerpt": "January 31 - 9:00 AM ET: Project submission deadline\nFebruary 6 - 12:00-1:00 PM ET: Finalist pitches and award ceremony (virtual)",
+   "reader": [
+    "{\"events\": [\n  {\"name\": \"Project Submission Window\", \"kind\": \"deadline\", \"date\": \"January 31\", \"time\": \"9:00 AM\", \"zone\": \"ET\"},\n  {\"name\": \"Finalist Ceremony\", \"kind\": \"event\", \"date\": \"February 6\", \"time\": \"12:00-1:00 PM\", \"zone\": \"ET\"}\n]}"
+   ],
+   "baseline": [
+    "{\"events\": [\n  {\"name\": \"Project Submission Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-01-31 22:00\"},\n  {\"name\": \"Finalist Pitches and Award Ceremony\", \"kind\": \"event\", \"taiwan_time\": \"2026-02-06 01:00\"}\n]}"
+   ]
+  },
+  {
+   "id": "anitya",
+   "label": "Anitya World Jam",
+   "site": "itch.io",
+   "kind": "two lines that disagree",
+   "url": "https://itch.io/jam/anitya-world-jam-2700-in-prizes",
+   "ref": "2026-10-19",
+   "chunks": [
+    "Submissions open from 2026-09-09 11:00:00 to 2026-10-28 23:59:59\nYou still have until 28 October (23:59 UTC)"
+   ],
+   "excerpt": "Submissions open from 2026-09-09 11:00:00 to 2026-10-28 23:59:59\nYou still have until 28 October (23:59 UTC)",
+   "reader": [
+    "{\"events\": [\n  {\"name\": \"Submission Window\", \"kind\": \"start\", \"date\": \"2026-09-09 11:00:00\", \"time\": \"11:00:00\", \"zone\": \"\"},\n  {\"name\": \"Submission Window\", \"kind\": \"start\", \"date\": \"2026-10-28 23:59:59\", \"time\": \"23:59:59\", \"zone\": \"\"},\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"28 October\", \"time\": \"23:59\", \"zone\": \"UTC\"}\n]}"
+   ],
+   "baseline": [
+    "{\"events\": [\n  {\"name\": \"Submissions Open\", \"kind\": \"start\", \"taiwan_time\": \"2026-09-09 19:00\"},\n  {\"name\": \"Submissions Close\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-29 03:59\"}\n]}"
+   ]
+  },
+  {
+   "id": "desall-horeca",
+   "label": "Desall brief",
+   "site": "Desall",
+   "kind": "Gemma rewords the date",
+   "url": "https://www.desall.com/Contest/Phygital-HORECA-Experience-Design/Brief",
+   "ref": "2026-10-18",
+   "chunks": [
+    "Upload phase: July 31, 2026 - 29 October 2026 (1:59 PM UTC)"
+   ],
+   "excerpt": "Upload phase: July 31, 2026 - 29 October 2026 (1:59 PM UTC)",
+   "reader": [
+    "{\"events\": [\n  {\"name\": \"Upload Phase\", \"kind\": \"start\", \"date\": \"July 31, 2026\", \"time\": \"1:59 PM\", \"zone\": \"UTC\"},\n  {\"name\": \"Upload Phase\", \"kind\": \"start\", \"date\": \"October 29, 2026\", \"time\": \"1:59 PM\", \"zone\": \"UTC\"}\n]}"
+   ],
+   "baseline": [
+    "{\"events\": [\n  {\"name\": \"Upload Phase\", \"kind\": \"start\", \"taiwan_time\": \"2026-08-30 09:59\"},\n  {\"name\": \"Upload Phase\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-29 17:59\"}\n]}"
+   ]
+  }
+ ]
+}

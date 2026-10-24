@@ -133,3 +133,8 @@ a { color: inherit; }
   .ev-when { text-align: left; }
   .toplinks { gap: 12px; }
 }
+
+.nz { border: 1px dashed var(--line); border-radius: 12px; padding: 8px 12px; }
+.nz summary { cursor: pointer; font-size: 14px; color: var(--ink-2); padding: 4px 0; }
+.nz[open] summary { margin-bottom: 8px; }
+.nz .ev { margin-bottom: 8px; }

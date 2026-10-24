@@ -56,7 +56,7 @@ function renderRows(res, { baseline = null, note = '' } = {}) {
   if (!res.rows.length) {
     $('rows').innerHTML = '<p class="empty">No dates found.</p>';
   } else {
-    $('rows').innerHTML = res.rows.map((r, i) => {
+    const card = (r) => {
       const quotes = [r.quote.date, r.quote.time, r.quote.zone, r.zoneText];
       const when = r.status === 'ok'
         ? `<div class="big">${esc(r.local.setZone(tz).toFormat('ccc d LLL, HH:mm'))}</div><div class="sub">${esc(r.local.setZone(tz).toFormat('yyyy'))} · ${esc(tz.replace(/_/g, ' '))} (${esc(offsetLabel(r.local.setZone(tz).offset))})</div>`
@@ -70,7 +70,11 @@ function renderRows(res, { baseline = null, note = '' } = {}) {
         ${r.notes.length || alt ? `<ul class="ev-notes">${r.notes.map((n) => `<li>${esc(n)}</li>`).join('')}${alt}</ul>` : ''}
         ${r.status === 'ok' ? `<div class="ev-actions"><a href="${esc(googleLink(r, state.source))}" target="_blank" rel="noopener">Add to Google Calendar</a></div>` : ''}
       </article>`;
-    }).join('');
+    };
+    const ok = res.rows.filter((r) => r.status === 'ok');
+    const nz = res.rows.filter((r) => r.status !== 'ok');
+    $('rows').innerHTML = (ok.length ? ok.map(card).join('') : '<p class="empty">No date with a time zone on this page.</p>')
+      + (nz.length ? `<details class="nz"><summary>${nz.length} date${nz.length > 1 ? 's' : ''} with no time zone on the page (kept off the calendar)</summary>${nz.map(card).join('')}</details>` : '');
   }
   $('dropped').innerHTML = res.dropped.length
     ? `<h3>Thrown out by the checker</h3><ul>${res.dropped.map((d) => `<li><b>${esc(d.name)}:</b> ${esc(d.why)}</li>`).join('')}</ul>` : '';
@@ -89,7 +93,11 @@ function renderBaseline(b, rows) {
       const near = ours.reduce((a, o) => (Math.abs(o.diff(t).as('minutes')) < Math.abs(a.diff(t).as('minutes')) ? o : a));
       const mins = Math.round(t.diff(near).as('minutes'));
       if (mins === 0) verdict = '<span class="verdict-ok">same as code</span>';
-      else if (Math.abs(mins) <= 36 * 60) verdict = `<span class="verdict-bad">${Math.abs(mins) % 60 ? Math.abs(mins) + ' min' : Math.abs(mins / 60) + ' h'} ${mins > 0 ? 'late' : 'early'}</span>`;
+      else if (Math.abs(mins) <= 36 * 60) {
+        const a = Math.abs(mins);
+        const txt = [Math.floor(a / 60) ? `${Math.floor(a / 60)} h` : '', a % 60 ? `${a % 60} min` : ''].filter(Boolean).join(' ');
+        verdict = `<span class="verdict-bad">${txt} ${mins > 0 ? 'late' : 'early'}</span>`;
+      }
       else if (Math.abs(Math.abs(t.year - near.year) - 1) === 0 && t.month === near.month) verdict = '<span class="verdict-bad">wrong year</span>';
     }
     return `<li><span>${esc(x.name)}</span><span>${esc(x.taiwan)} · ${verdict}</span></li>`;
