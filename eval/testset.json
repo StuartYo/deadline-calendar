@@ -1,0 +1,244 @@
+[
+ {
+  "id": "dev-week3",
+  "event": "deadline",
+  "truth_taiwan": "2026-10-26 14:59",
+  "ref": "2026-10-24",
+  "url": "https://dev.to/challenges/hacktoberfest-week3-2026-10-19",
+  "input_kind": "page section (schedule list of the launch post)",
+  "chunks": [
+   "- **October 19:** Hacktoberfest Open-Source AI Challenge: Week 3 begins!\n- **October 20:** International Sloth Day 🦥\n- <mark>**October 25:** Submissions due at 11:59 PM PDT</mark>\n- **Week of October 26:** Winners announced"
+  ]
+ },
+ {
+  "id": "dev-week2",
+  "event": "deadline",
+  "truth_taiwan": "2026-10-19 14:59",
+  "ref": "2026-10-14",
+  "url": "https://dev.to/challenges/hacktoberfest-week2-2026-10-12",
+  "input_kind": "original line",
+  "chunks": [
+   "Entry Period: The Contest begins on October 12, 2026 at 12:00 PM PDT and ends on October 18, 2026 at 11:59 PM PDT (the \"Entry Period\")"
+  ]
+ },
+ {
+  "id": "arbiter",
+  "event": "deadline",
+  "truth_taiwan": "2026-12-21 13:00",
+  "ref": "2026-10-21",
+  "url": "https://arbiter-hacks-v1.devpost.com/",
+  "input_kind": "saved page (Devpost dates page, HTML to text)",
+  "chunks": [
+   "Arbiter Hacks V1\nOct 20 - Dec 20, 2026\nSubmissions\nOctober 20 at 9:00am PDT\nDecember 20 at 9:00pm PST\nJudging\nDecember 30 at 5:00pm PST\nWinners Announced\nDecember 31 at 9:00am PST"
+  ]
+ },
+ {
+  "id": "kiroween",
+  "event": "deadline",
+  "truth_taiwan": "2026-12-05 06:00",
+  "ref": "2026-10-17",
+  "url": "https://kiroween.devpost.com/",
+  "input_kind": "original line quoted in our notes",
+  "chunks": [
+   "You will have until Friday, December 4, 2026 at 2:00 PM Pacific Time"
+  ]
+ },
+ {
+  "id": "codex-twitchcon",
+  "event": "deadline",
+  "truth_taiwan": "2026-11-03 06:00",
+  "ref": "2026-10-24",
+  "url": "https://twitchcon-codex.devpost.com/",
+  "input_kind": "saved page",
+  "chunks": [
+   "Deadline: Nov 2, 2026 @ 2:00pm PST\n[/rules] View full rules\nNovember 02 at 5:00pm EST to deadline\nThe top 5 projects will be showcased on the Codex Booth stage at TwitchCon San Diego on November 15, where winners will be announced live."
+  ]
+ },
+ {
+  "id": "buildwithai",
+  "event": "deadline",
+  "truth_taiwan": "2026-10-27 05:00",
+  "ref": "2026-10-15",
+  "url": "https://learn-ai-basics.devpost.com/details/dates",
+  "input_kind": "saved page",
+  "chunks": [
+   "Deadline: Oct 26, 2026 @ 5:00pm EDT\nSubmissions\nSeptember 22 at 10:15am EDT\nOctober 26 at 5:00pm EDT\nJudging\nOctober 27 at 10:00am EDT\nOctober 30 at 5:00pm EDT\nWinners Announced\nNovember 04 at 4:00pm EST"
+  ]
+ },
+ {
+  "id": "buildwithai-results",
+  "event": "results",
+  "truth_taiwan": "2026-11-05 05:00",
+  "ref": "2026-10-15",
+  "url": "https://learn-ai-basics.devpost.com/details/dates",
+  "input_kind": "saved page",
+  "chunks": [
+   "Deadline: Oct 26, 2026 @ 5:00pm EDT\nSubmissions\nSeptember 22 at 10:15am EDT\nOctober 26 at 5:00pm EDT\nJudging\nOctober 27 at 10:00am EDT\nOctober 30 at 5:00pm EDT\nWinners Announced\nNovember 04 at 4:00pm EST"
+  ]
+ },
+ {
+  "id": "pumpkin",
+  "event": "deadline",
+  "truth_taiwan": "2026-10-24 11:45",
+  "ref": "2026-10-11",
+  "url": "https://pumpkin-playground.devpost.com/details/dates",
+  "input_kind": "original times quoted in our notes; \"Submissions end:\" label translated from our Chinese note",
+  "chunks": [
+   "Submissions end: October 23 at 11:45pm EDT\nWinners Announced October 26 at 5:00pm EDT"
+  ]
+ },
+ {
+  "id": "pumpkin-results",
+  "event": "results",
+  "truth_taiwan": "2026-10-27 05:00",
+  "ref": "2026-10-11",
+  "url": "https://pumpkin-playground.devpost.com/details/dates",
+  "input_kind": "same as pumpkin",
+  "chunks": [
+   "Submissions end: October 23 at 11:45pm EDT\nWinners Announced October 26 at 5:00pm EDT"
+  ]
+ },
+ {
+  "id": "hacknation",
+  "event": "deadline",
+  "truth_taiwan": "2027-01-31 22:00",
+  "ref": "2026-10-14",
+  "url": "https://luma.com/9j6zoc6n",
+  "input_kind": "original lines quoted in our notes",
+  "chunks": [
+   "January 31 - 9:00 AM ET: Project submission deadline\nFebruary 6 - 12:00-1:00 PM ET: Finalist pitches and award ceremony (virtual)"
+  ]
+ },
+ {
+  "id": "hacknation-finals",
+  "event": "event",
+  "truth_taiwan": "2027-02-07 01:00",
+  "ref": "2026-10-14",
+  "url": "https://luma.com/9j6zoc6n",
+  "input_kind": "original lines quoted in our notes",
+  "chunks": [
+   "January 31 - 9:00 AM ET: Project submission deadline\nFebruary 6 - 12:00-1:00 PM ET: Finalist pitches and award ceremony (virtual)"
+  ]
+ },
+ {
+  "id": "vultr",
+  "event": "deadline",
+  "truth_taiwan": "2026-11-09 06:00",
+  "ref": "2026-10-14",
+  "url": "https://lablab.ai/ai-hackathons/vultr-hackathon/live",
+  "input_kind": "original line quoted in our notes",
+  "chunks": [
+   "You have until Nov 8, 2026, 22:00 UTC to submit"
+  ]
+ },
+ {
+  "id": "ai-philosophy",
+  "event": "deadline",
+  "truth_taiwan": "2026-11-01 19:59",
+  "ref": "2026-10-19",
+  "url": "https://www.zacharygoodsell.com/ai-philosophy-competition",
+  "input_kind": "original line quoted in our notes (FAQ)",
+  "chunks": [
+   "11:59pm Anywhere on Earth on October 31, 2026"
+  ]
+ },
+ {
+  "id": "anitya",
+  "event": "deadline",
+  "truth_taiwan": "2026-10-29 07:59",
+  "ref": "2026-10-19",
+  "url": "https://itch.io/jam/anitya-world-jam-2700-in-prizes",
+  "input_kind": "two original lines quoted in our notes (itch page + organizer comment)",
+  "chunks": [
+   "Submissions open from 2026-09-09 11:00:00 to 2026-10-28 23:59:59\nYou still have until 28 October (23:59 UTC)"
+  ]
+ },
+ {
+  "id": "desall-horeca",
+  "event": "deadline",
+  "truth_taiwan": "2026-10-29 21:59",
+  "ref": "2026-10-18",
+  "url": "https://www.desall.com/Contest/Phygital-HORECA-Experience-Design/Brief",
+  "input_kind": "original line from our page notes",
+  "chunks": [
+   "Upload phase: July 31, 2026 - 29 October 2026 (1:59 PM UTC)"
+  ]
+ },
+ {
+  "id": "desall-perfume",
+  "event": "deadline",
+  "truth_taiwan": "2026-11-26 21:59",
+  "ref": "2026-10-18",
+  "url": "https://www.desall.com/Contest/Perfume-Refill-Cap-Design/Brief",
+  "input_kind": "original line from our page notes",
+  "chunks": [
+   "Upload Phase: 28 July 2026 - 26 November 2026 (1:59 PM UTC)"
+  ]
+ },
+ {
+  "id": "renderjuice",
+  "event": "deadline",
+  "truth_taiwan": "2026-11-01 07:59",
+  "ref": "2026-10-18",
+  "url": "https://www.renderjuice.com/contests/speed",
+  "input_kind": "saved page",
+  "chunks": [
+   "See award details\nSubmissions October 15-31, 2026\nTime until deadline October 31 October 31, 2026 · 23:59 UTC\ntotal value\nHow public voting works Public voting happens in Discord. Every entry is automatically included. Only 🔥 reactions on entry posts count. Voting closes November 3, 2026 at 23:59 UTC.\na submission to vote. The submission with the most\n🔥 reactions by November 3, 2026 at 23:59 UTC wins.\nContest FAQ\nSubmissions run from October 15, 2026 at 00:00 UTC through October 31, 2026 at 23:59 UTC.\nOctober 15, 2026 at 00:00 UTC to October 31, 2026 at 23:59 UTC Get ready for the Speed contest."
+  ]
+ },
+ {
+  "id": "bound-jam",
+  "event": "deadline",
+  "truth_taiwan": "2026-11-02 01:00",
+  "ref": "2026-10-23",
+  "url": "https://itch.io/jam/bound-jam-2026",
+  "input_kind": "saved page",
+  "chunks": [
+   "Submission feed\nSubmissions open from 2026-10-01 16:52:48 to 2026-11-01 17:55:25\nOctober 1 - November 1\nSchedule\nOct 1, 18:00 CEST\nThe jam starts - EXPECT THE UNEXPECTED\nOct 1 - Nov 1\nBuild your game. You have the whole month\nNov 1, 18:00 CET\nMade during the jam\nYour game should primarily be created between October 1 and November 1.\nCan I join after the jam has started?\nYes. You can join any time before submissions close on November 1."
+  ]
+ },
+ {
+  "id": "gemma4-paper",
+  "event": "deadline",
+  "truth_taiwan": "2026-11-13 07:59",
+  "ref": "2026-10-17",
+  "url": "https://www.kaggle.com/competitions/gemma-4-developer-agent-paper",
+  "input_kind": "our note line (official time copied from the Kaggle rules)",
+  "chunks": [
+   "截止:2026-11-12 23:59 UTC"
+  ]
+ },
+ {
+  "id": "zindi-bias",
+  "event": "deadline",
+  "truth_taiwan": "2026-11-01 07:59",
+  "ref": "2026-10-18",
+  "url": "https://zindi.africa/competitions/bias-bounty-mapping-equity-challenge",
+  "input_kind": "our note line",
+  "chunks": [
+   "截止 2026-10-31 23:59 UTC"
+  ]
+ },
+ {
+  "id": "hyperbloom",
+  "event": "deadline",
+  "truth_taiwan": "2026-10-20 05:00",
+  "ref": "2026-10-11",
+  "url": "https://hyperbloom-october.devpost.com/",
+  "input_kind": "our note line",
+  "chunks": [
+   "截止 10/19 17:00 EDT"
+  ]
+ },
+ {
+  "id": "ugreen-nas",
+  "event": "deadline",
+  "truth_taiwan": "2026-11-16 15:45",
+  "ref": "2026-10-24",
+  "url": "https://ugreenhackathon.devpost.com/",
+  "input_kind": "our note line (PST time copied from the rules)",
+  "chunks": [
+   "第一輪截止 | 2026-11-15 23:45 PST |"
+  ]
+ }
+]

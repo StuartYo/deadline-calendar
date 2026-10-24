@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deadline Calendar</title>
+  <meta name="description" content="Paste a contest rules page. Gemma finds the dates in your browser, plain code converts the time zones and writes a calendar file." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="/" aria-label="Deadline Calendar home">
+        <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M3 12h26M10 2v6M22 2v6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="21" cy="21" r="3.2" fill="var(--accent)"/></svg>
+        <span>Deadline Calendar</span>
+      </a>
+      <nav class="toplinks">
+        <a href="#how">How it works</a>
+        <a href="https://github.com/StuartYo/deadline-calendar" target="_blank" rel="noopener">Code</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Paste the rules. Get every deadline in your own time.</h1>
+      <p class="lede">Contest pages write "11:59 PM PDT", "18:00 CET" or "Anywhere on Earth". <strong>Gemma 4 runs in this tab</strong> and points at the dates. Plain code checks each quote against the page, does the time zone math and writes a calendar file. Nothing you paste leaves your browser.</p>
+    </section>
+
+    <section class="modebar" aria-label="Mode">
+      <div class="seg" role="tablist">
+        <button role="tab" id="tab-recorded" aria-selected="true" class="on">Recorded runs</button>
+        <button role="tab" id="tab-live" aria-selected="false">Run Gemma 4 here</button>
+      </div>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <div class="grid">
+      <section class="card src" aria-label="The page">
+        <div class="card-h"><h2>The page</h2><span id="srcTag" class="tag"></span></div>
+        <div id="examples" class="examples" aria-label="Examples"></div>
+        <div id="liveTools" class="livetools hidden">
+          <div class="urlrow">
+            <input id="url" type="url" placeholder="https://… rules page (optional)" aria-label="Rules page address" />
+            <button id="fetch" class="btn ghost" type="button">Read page</button>
+          </div>
+          <p class="fine">Most sites don't let another page read them. If that happens, press Ctrl+A, Ctrl+C on the rules page and paste below, or drag this to your bookmarks bar and click it on any rules page: <a id="bm" class="bm" href="#">Send to Deadline Calendar</a></p>
+        </div>
+        <textarea id="text" class="text" rows="12" spellcheck="false" placeholder="Paste the rules page here (Ctrl+A, Ctrl+C on the page, then Ctrl+V)"></textarea>
+        <div class="row">
+          <label class="tz">Your time zone <select id="tz"></select></label>
+          <button id="run" class="btn primary" type="button">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="currentColor"/></svg>
+            <span>Find the dates</span>
+          </button>
+        </div>
+        <details id="excerptBox" class="excerpt">
+          <summary id="excerptSum">What Gemma reads</summary>
+          <pre id="excerpt"></pre>
+        </details>
+      </section>
+
+      <section class="card out" aria-label="Dates found" aria-live="polite">
+        <div class="card-h"><h2>Dates found</h2><span id="outTag" class="tag"></span></div>
+        <div id="rows" class="rows"><p class="empty">Pick an example or paste a page.</p></div>
+        <div id="dropped" class="dropped"></div>
+        <div id="baseline" class="baseline"></div>
+        <div class="row end">
+          <button id="ics" class="btn primary" type="button" disabled>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span id="icsLabel">Download .ics</span>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <section id="how" class="how">
+      <h2>How it works</h2>
+      <ol>
+        <li><b>Code picks the lines.</b> A rules page can run to 40,000 characters. Code keeps the lines that contain a date, plus the short label above each one, so the model reads a few hundred characters instead of the whole page.</li>
+        <li><b>Gemma points.</b> Gemma 4 E2B, running on your GPU through WebLLM, lists each event and copies the date, the time and the zone exactly as written. Its answer is held to a grammar, so it always parses.</li>
+        <li><b>Code checks.</b> Every quote is looked up on the page. A date Gemma reworded or made up is thrown out and listed.</li>
+        <li><b>Code converts.</b> The date and time are read by plain functions, and Luxon applies the time zone database: daylight saving on that exact date, "PST" written in summer, Anywhere on Earth, missing years.</li>
+        <li><b>You get a calendar.</b> One .ics file for every event, with reminders 3 days and 3 hours before each deadline, or one Google Calendar link per row.</li>
+      </ol>
+      <p class="fine">The recorded runs are real outputs from Gemma 4 E2B on pages from contests I entered, saved during my test. The checker and the time zone code run live on them in your browser. Live mode needs Chrome or Edge with WebGPU and downloads about 2.8 GB once.</p>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <span>MIT licensed. Runs in your browser; the page is static files on Vercel.</span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

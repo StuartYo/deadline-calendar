@@ -1,0 +1,396 @@
+{
+ "model": "gemma-4-E2B-it-q4f16_1-MLC",
+ "run_at": "2026-10-24T03:51:41.172Z",
+ "run_file": "eval/runs/reader-vs-baseline.json",
+ "n": 15,
+ "near_window_hours": 36,
+ "definitions": {
+  "correct": "the Taiwan time in our records appears in the output, to the minute",
+  "wrong": "not correct, but the output has a time within 36 hours of it (the deadline was found and converted wrong)",
+  "missing": "nothing within 36 hours"
+ },
+ "totals": {
+  "reader": {
+   "correct": 14,
+   "wrong": 0,
+   "missing": 1
+  },
+  "baseline": {
+   "correct": 1,
+   "wrong": 11,
+   "missing": 3
+  }
+ },
+ "rates": {
+  "reader_correct": "14/15",
+  "baseline_correct": "1/15",
+  "reader_pct": 93,
+  "baseline_pct": 7
+ },
+ "reader_stats": {
+  "events": 37,
+  "rows_ok": 31,
+  "rows_no_zone": 6,
+  "dropped": 1,
+  "dropped_why": [
+   "desall-horeca: Gemma quoted \"October 29, 2026\", but those words are not on the page."
+  ],
+  "parse_fail": 0,
+  "notes": 8,
+  "median_ms": 9643
+ },
+ "baseline_stats": {
+  "events": 30,
+  "parse_fail": 0,
+  "median_ms": 8016
+ },
+ "items": [
+  {
+   "id": "dev-week3",
+   "event": "deadline",
+   "truth_taiwan": "2026-10-26 14:59",
+   "input_kind": "page section (schedule list of the launch post)",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-10-26 14:59"
+    ],
+    "matched_line": "- <mark>**October 25:** Submissions due at 11:59 PM PDT</mark>",
+    "notes": [
+     "No year next to this date. Code assumed 2026."
+    ]
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-10-25 11:59",
+     "2026-10-20 00:00",
+     "2026-10-25 23:59"
+    ]
+   }
+  },
+  {
+   "id": "dev-week2",
+   "event": "deadline",
+   "truth_taiwan": "2026-10-19 14:59",
+   "input_kind": "original line",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-10-13 03:00",
+     "2026-10-19 14:59"
+    ],
+    "matched_line": "Entry Period: The Contest begins on October 12, 2026 at 12:00 PM PDT and ends on October 18, 2026 at 11:59 PM PDT (the \"Entry Period\")",
+    "notes": []
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-10-12 00:00",
+     "2026-10-18 22:59"
+    ]
+   }
+  },
+  {
+   "id": "arbiter",
+   "event": "deadline",
+   "truth_taiwan": "2026-12-21 13:00",
+   "input_kind": "saved page (Devpost dates page, HTML to text)",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-10-21 00:00",
+     "2026-12-21 13:00",
+     "2026-12-31 09:00",
+     "2027-01-01 01:00"
+    ],
+    "matched_line": "December 20 at 9:00pm PST",
+    "notes": [
+     "No year next to this date. Code assumed 2026."
+    ]
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-10-20 17:00",
+     "2026-10-20 09:00",
+     "2026-12-20 21:00",
+     "2027-01-01 09:00"
+    ]
+   }
+  },
+  {
+   "id": "kiroween",
+   "event": "deadline",
+   "truth_taiwan": "2026-12-05 06:00",
+   "input_kind": "original line quoted in our notes",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-12-05 06:00"
+    ],
+    "matched_line": "You will have until Friday, December 4, 2026 at 2:00 PM Pacific Time",
+    "notes": []
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-12-04 14:00"
+    ]
+   }
+  },
+  {
+   "id": "codex-twitchcon",
+   "event": "deadline",
+   "truth_taiwan": "2026-11-03 06:00",
+   "input_kind": "saved page",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-11-03 06:00"
+    ],
+    "matched_line": "Deadline: Nov 2, 2026 @ 2:00pm PST",
+    "notes": []
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-11-02 10:00",
+     "2026-11-15 18:00"
+    ]
+   }
+  },
+  {
+   "id": "buildwithai",
+   "event": "deadline",
+   "truth_taiwan": "2026-10-27 05:00",
+   "input_kind": "saved page",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-09-22 22:15",
+     "2026-10-27 05:00",
+     "2026-10-27 22:00",
+     "2026-10-31 05:00",
+     "2026-11-05 05:00"
+    ],
+    "matched_line": "Deadline: Oct 26, 2026 @ 5:00pm EDT",
+    "notes": []
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-10-27 00:00",
+     "2026-09-22 22:15"
+    ]
+   }
+  },
+  {
+   "id": "buildwithai-results",
+   "event": "results",
+   "truth_taiwan": "2026-11-05 05:00",
+   "input_kind": "saved page",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-09-22 22:15",
+     "2026-10-27 05:00",
+     "2026-10-27 22:00",
+     "2026-10-31 05:00",
+     "2026-11-05 05:00"
+    ],
+    "matched_line": "November 04 at 4:00pm EST",
+    "notes": [
+     "No year next to this date. Code assumed 2026."
+    ]
+   },
+   "baseline": {
+    "grade": "missing",
+    "times": [
+     "2026-10-27 00:00",
+     "2026-09-22 22:15"
+    ]
+   }
+  },
+  {
+   "id": "pumpkin",
+   "event": "deadline",
+   "truth_taiwan": "2026-10-24 11:45",
+   "input_kind": "original times quoted in our notes; \"Submissions end:\" label translated from our Chinese note",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-10-24 11:45",
+     "2026-10-27 05:00"
+    ],
+    "matched_line": "Submissions end: October 23 at 11:45pm EDT",
+    "notes": [
+     "No year next to this date. Code assumed 2026."
+    ]
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-10-24 00:45",
+     "2026-10-27 01:00"
+    ]
+   }
+  },
+  {
+   "id": "pumpkin-results",
+   "event": "results",
+   "truth_taiwan": "2026-10-27 05:00",
+   "input_kind": "same as pumpkin",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-10-24 11:45",
+     "2026-10-27 05:00"
+    ],
+    "matched_line": "Winners Announced October 26 at 5:00pm EDT",
+    "notes": [
+     "No year next to this date. Code assumed 2026."
+    ]
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-10-24 00:45",
+     "2026-10-27 01:00"
+    ]
+   }
+  },
+  {
+   "id": "hacknation",
+   "event": "deadline",
+   "truth_taiwan": "2027-01-31 22:00",
+   "input_kind": "original lines quoted in our notes",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2027-01-31 22:00",
+     "2027-02-07 01:00"
+    ],
+    "matched_line": "January 31 - 9:00 AM ET: Project submission deadline",
+    "notes": [
+     "No year next to this date. Code assumed 2027."
+    ]
+   },
+   "baseline": {
+    "grade": "missing",
+    "times": [
+     "2026-01-31 22:00",
+     "2026-02-06 01:00"
+    ]
+   }
+  },
+  {
+   "id": "hacknation-finals",
+   "event": "event",
+   "truth_taiwan": "2027-02-07 01:00",
+   "input_kind": "original lines quoted in our notes",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2027-01-31 22:00",
+     "2027-02-07 01:00"
+    ],
+    "matched_line": "February 6 - 12:00-1:00 PM ET: Finalist pitches and award ceremony (virtual)",
+    "notes": [
+     "No year next to this date. Code assumed 2027."
+    ]
+   },
+   "baseline": {
+    "grade": "missing",
+    "times": [
+     "2026-01-31 22:00",
+     "2026-02-06 01:00"
+    ]
+   }
+  },
+  {
+   "id": "vultr",
+   "event": "deadline",
+   "truth_taiwan": "2026-11-09 06:00",
+   "input_kind": "original line quoted in our notes",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-11-09 06:00"
+    ],
+    "matched_line": "You have until Nov 8, 2026, 22:00 UTC to submit",
+    "notes": []
+   },
+   "baseline": {
+    "grade": "correct",
+    "times": [
+     "2026-11-09 06:00"
+    ]
+   }
+  },
+  {
+   "id": "ai-philosophy",
+   "event": "deadline",
+   "truth_taiwan": "2026-11-01 19:59",
+   "input_kind": "original line quoted in our notes (FAQ)",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-11-01 19:59"
+    ],
+    "matched_line": "11:59pm Anywhere on Earth on October 31, 2026",
+    "notes": []
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-11-01 07:59"
+    ]
+   }
+  },
+  {
+   "id": "anitya",
+   "event": "deadline",
+   "truth_taiwan": "2026-10-29 07:59",
+   "input_kind": "two original lines quoted in our notes (itch page + organizer comment)",
+   "reader": {
+    "grade": "correct",
+    "times": [
+     "2026-10-29 07:59"
+    ],
+    "matched_line": "You still have until 28 October (23:59 UTC)",
+    "notes": [
+     "No year next to this date. Code assumed 2026."
+    ]
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-09-09 19:00",
+     "2026-10-29 03:59"
+    ]
+   }
+  },
+  {
+   "id": "desall-horeca",
+   "event": "deadline",
+   "truth_taiwan": "2026-10-29 21:59",
+   "input_kind": "original line from our page notes",
+   "reader": {
+    "grade": "missing",
+    "times": [
+     "2026-07-31 21:59"
+    ],
+    "matched_line": null,
+    "notes": []
+   },
+   "baseline": {
+    "grade": "wrong",
+    "times": [
+     "2026-08-30 09:59",
+     "2026-10-29 17:59"
+    ]
+   }
+  }
+ ]
+}

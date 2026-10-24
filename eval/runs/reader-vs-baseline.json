@@ -1,0 +1,953 @@
+{
+ "results": [
+  {
+   "id": "dev-week3",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Hacktoberfest Open-Source AI Challenge\", \"kind\": \"start\", \"date\": \"October 19\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"International Sloth Day\", \"kind\": \"other\", \"date\": \"October 20\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Submissions due\", \"kind\": \"deadline\", \"date\": \"October 25\", \"time\": \"11:59 PM\", \"zone\": \"PDT\"},\n  {\"name\": \"Winners announced\", \"kind\": \"results\", \"date\": \"Week of October 26\", \"time\": \"\", \"zone\": \"\"}\n]}",
+     "ms": 66091,
+     "usage": {
+      "completion_tokens": 166,
+      "prompt_tokens": 313,
+      "total_tokens": 479,
+      "extra": {
+       "e2e_latency_s": 66.09,
+       "prefill_tokens_per_s": 6.58932108940637,
+       "decode_tokens_per_s": 8.914389445362715,
+       "time_to_first_token_s": 47.50109999999986,
+       "time_per_output_token_s": 0.11217818181818409,
+       "grammar_init_s": 1.2141000000000932,
+       "grammar_per_token_s": 0.00022409638553768044
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Hacktoberfest Open-Source AI Challenge: Week 3 begins!\", \"kind\": \"start\", \"taiwan_time\": \"2026-10-25 11:59\"},\n  {\"name\": \"International Sloth Day\", \"kind\": \"other\", \"taiwan_time\": \"2026-10-20 00:00\"},\n  {\"name\": \"Submissions due\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-25 23:59\"}\n]}",
+     "ms": 10117,
+     "usage": {
+      "completion_tokens": 144,
+      "prompt_tokens": 253,
+      "total_tokens": 397,
+      "extra": {
+       "e2e_latency_s": 10.116,
+       "prefill_tokens_per_s": 405.8389477060367,
+       "decode_tokens_per_s": 15.148626030212421,
+       "time_to_first_token_s": 0.6234000000001397,
+       "time_per_output_token_s": 0.06601258741258777,
+       "grammar_init_s": 0.1074000000001397,
+       "grammar_per_token_s": 0.00016736111111014115
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "dev-week2",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Contest Start and End\", \"kind\": \"start\", \"date\": \"October 12, 2026\", \"time\": \"12:00 PM\", \"zone\": \"PDT\"},\n  {\"name\": \"Contest End Date\", \"kind\": \"deadline\", \"date\": \"October 18, 2026\", \"time\": \"11:59 PM\", \"zone\": \"PDT\"}\n]}",
+     "ms": 8199,
+     "usage": {
+      "completion_tokens": 114,
+      "prompt_tokens": 292,
+      "total_tokens": 406,
+      "extra": {
+       "e2e_latency_s": 8.199,
+       "prefill_tokens_per_s": 369.667046461621,
+       "decode_tokens_per_s": 15.335133741364148,
+       "time_to_first_token_s": 0.7898999999999069,
+       "time_per_output_token_s": 0.0652097345132801,
+       "grammar_init_s": 0.027299999999813737,
+       "grammar_per_token_s": 0.00023947368420072307
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Contest Start\", \"kind\": \"start\", \"taiwan_time\": \"2026-10-12 00:00\"},\n  {\"name\": \"Entry Period End\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-18 22:59\"}\n]}",
+     "ms": 7281,
+     "usage": {
+      "completion_tokens": 94,
+      "prompt_tokens": 232,
+      "total_tokens": 326,
+      "extra": {
+       "e2e_latency_s": 7.281,
+       "prefill_tokens_per_s": 411.0559886604227,
+       "decode_tokens_per_s": 13.909661980258706,
+       "time_to_first_token_s": 0.5644000000001397,
+       "time_per_output_token_s": 0.07189247311827206,
+       "grammar_init_s": 0.015800000000046565,
+       "grammar_per_token_s": 0.00018510638298516334
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "arbiter",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Arbiter Hacks V1\", \"kind\": \"start\", \"date\": \"Oct 20 - Dec 20, 2026\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Arbiter Hacks V1\", \"kind\": \"start\", \"date\": \"October 20\", \"time\": \"9:00am\", \"zone\": \"PDT\"},\n  {\"name\": \"Arbiter Hacks V1\", \"kind\": \"start\", \"date\": \"December 20\", \"time\": \"9:00pm\", \"zone\": \"PST\"},\n  {\"name\": \"Arbiter Hacks V1\", \"kind\": \"judging\", \"date\": \"December 30\", \"time\": \"5:00pm\", \"zone\": \"PST\"},\n  {\"name\": \"Arbiter Hacks V1\", \"kind\": \"results\", \"date\": \"December 31\", \"time\": \"9:00am\", \"zone\": \"PST\"}\n]}",
+     "ms": 16887,
+     "usage": {
+      "completion_tokens": 238,
+      "prompt_tokens": 319,
+      "total_tokens": 557,
+      "extra": {
+       "e2e_latency_s": 16.887,
+       "prefill_tokens_per_s": 366.3298116675106,
+       "decode_tokens_per_s": 14.881419574402956,
+       "time_to_first_token_s": 0.8707999999998137,
+       "time_per_output_token_s": 0.06719789029536317,
+       "grammar_init_s": 0.028300000000046566,
+       "grammar_per_token_s": 0.0002705882353103567
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Arbiter Hacks V1\", \"kind\": \"start\", \"taiwan_time\": \"2026-10-20 17:00\"},\n  {\"name\": \"Arbiter Hacks V1\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-20 09:00\"},\n  {\"name\": \"Arbiter Hacks V1\", \"kind\": \"start\", \"taiwan_time\": \"2026-12-20 21:00\"},\n  {\"name\": \"Arbiter Hacks V1\", \"kind\": \"start\", \"taiwan_time\": \"2027-01-01 09:00\"}\n]}",
+     "ms": 12167,
+     "usage": {
+      "completion_tokens": 183,
+      "prompt_tokens": 259,
+      "total_tokens": 442,
+      "extra": {
+       "e2e_latency_s": 12.167,
+       "prefill_tokens_per_s": 384.38705847429816,
+       "decode_tokens_per_s": 15.952178524163331,
+       "time_to_first_token_s": 0.6738000000000466,
+       "time_per_output_token_s": 0.06268736263735165,
+       "grammar_init_s": 0.026399999999906866,
+       "grammar_per_token_s": 0.00014480874318084983
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "kiroween",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"Friday, December 4, 2026\", \"time\": \"2:00 PM\", \"zone\": \"Pacific Time\"}\n]}",
+     "ms": 4218,
+     "usage": {
+      "completion_tokens": 59,
+      "prompt_tokens": 262,
+      "total_tokens": 321,
+      "extra": {
+       "e2e_latency_s": 4.218,
+       "prefill_tokens_per_s": 379.71014492753625,
+       "decode_tokens_per_s": 16.490858946289446,
+       "time_to_first_token_s": 0.69,
+       "time_per_output_token_s": 0.06063965517241942,
+       "grammar_init_s": 0.028800000000046566,
+       "grammar_per_token_s": 0.00018305084745447002
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-12-04 14:00\"}\n]}",
+     "ms": 3617,
+     "usage": {
+      "completion_tokens": 50,
+      "prompt_tokens": 202,
+      "total_tokens": 252,
+      "extra": {
+       "e2e_latency_s": 3.616,
+       "prefill_tokens_per_s": 406.27514078845314,
+       "decode_tokens_per_s": 15.755627009647483,
+       "time_to_first_token_s": 0.49719999999995346,
+       "time_per_output_token_s": 0.06346938775509728,
+       "grammar_init_s": 0.018199999999953434,
+       "grammar_per_token_s": 0.00013800000001210717
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "codex-twitchcon",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"Nov 2, 2026\", \"time\": \"2:00pm\", \"zone\": \"PST\"},\n  {\"name\": \"Rules Viewing\", \"kind\": \"other\", \"date\": \"November 02\", \"time\": \"5:00pm\", \"zone\": \"EST\"},\n  {\"name\": \"Winner Announcement\", \"kind\": \"judging\", \"date\": \"November 15\", \"time\": \"\", \"zone\": \"San Diego\"}\n]}",
+     "ms": 12933,
+     "usage": {
+      "completion_tokens": 137,
+      "prompt_tokens": 311,
+      "total_tokens": 448,
+      "extra": {
+       "e2e_latency_s": 12.932,
+       "prefill_tokens_per_s": 366.6588068851887,
+       "decode_tokens_per_s": 11.298871774419723,
+       "time_to_first_token_s": 0.8481999999999534,
+       "time_per_output_token_s": 0.08850441176471861,
+       "grammar_init_s": 0.020300000000046566,
+       "grammar_per_token_s": 0.0002999999999921822
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-02 10:00\"},\n  {\"name\": \"Live Event\", \"kind\": \"event\", \"taiwan_time\": \"2026-11-15 18:00\"}\n]}",
+     "ms": 8311,
+     "usage": {
+      "completion_tokens": 91,
+      "prompt_tokens": 251,
+      "total_tokens": 342,
+      "extra": {
+       "e2e_latency_s": 8.311,
+       "prefill_tokens_per_s": 391.63676080517473,
+       "decode_tokens_per_s": 11.77347827793143,
+       "time_to_first_token_s": 0.6408999999999069,
+       "time_per_output_token_s": 0.08493666666667495,
+       "grammar_init_s": 0.019400000000139698,
+       "grammar_per_token_s": 0.00020219780219677885
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "buildwithai",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"Oct 26, 2026\", \"time\": \"5:00pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Submission Start\", \"kind\": \"start\", \"date\": \"September 22\", \"time\": \"10:15am\", \"zone\": \"EDT\"},\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"October 26\", \"time\": \"5:00pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Judging Start\", \"kind\": \"judging\", \"date\": \"October 27\", \"time\": \"10:00am\", \"zone\": \"EDT\"},\n  {\"name\": \"Judging Deadline\", \"kind\": \"judging\", \"date\": \"October 30\", \"time\": \"5:00pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Winners Announced\", \"kind\": \"results\", \"date\": \"November 04\", \"time\": \"4:00pm\", \"zone\": \"EST\"}\n]}",
+     "ms": 74655,
+     "usage": {
+      "completion_tokens": 270,
+      "prompt_tokens": 333,
+      "total_tokens": 603,
+      "extra": {
+       "e2e_latency_s": 74.654,
+       "prefill_tokens_per_s": 7.810356110020485,
+       "decode_tokens_per_s": 8.44804140482481,
+       "time_to_first_token_s": 42.63569999999995,
+       "time_per_output_token_s": 0.11837063197025574,
+       "grammar_init_s": 1.8453000000000466,
+       "grammar_per_token_s": 0.0004192592592556373
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-27 00:00\"},\n  {\"name\": \"Submission Start\", \"kind\": \"start\", \"taiwan_time\": \"2026-09-22 22:15\"}\n]}",
+     "ms": 8506,
+     "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 273,
+      "total_tokens": 363,
+      "extra": {
+       "e2e_latency_s": 8.505,
+       "prefill_tokens_per_s": 346.05146406392726,
+       "decode_tokens_per_s": 11.588994361758997,
+       "time_to_first_token_s": 0.7888999999999069,
+       "time_per_output_token_s": 0.08628876404494326,
+       "grammar_init_s": 0.1444000000001397,
+       "grammar_per_token_s": 0.0002433333333348858
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "buildwithai-results",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"Oct 26, 2026\", \"time\": \"5:00pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Submission Start\", \"kind\": \"start\", \"date\": \"September 22\", \"time\": \"10:15am\", \"zone\": \"EDT\"},\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"October 26\", \"time\": \"5:00pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Judging Start\", \"kind\": \"judging\", \"date\": \"October 27\", \"time\": \"10:00am\", \"zone\": \"EDT\"},\n  {\"name\": \"Judging Deadline\", \"kind\": \"judging\", \"date\": \"October 30\", \"time\": \"5:00pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Winners Announced\", \"kind\": \"results\", \"date\": \"November 04\", \"time\": \"4:00pm\", \"zone\": \"EST\"}\n]}",
+     "ms": 24151,
+     "usage": {
+      "completion_tokens": 270,
+      "prompt_tokens": 333,
+      "total_tokens": 603,
+      "extra": {
+       "e2e_latency_s": 24.151,
+       "prefill_tokens_per_s": 352.2691209139782,
+       "decode_tokens_per_s": 11.668510204522722,
+       "time_to_first_token_s": 0.9453000000000465,
+       "time_per_output_token_s": 0.08570074349443509,
+       "grammar_init_s": 0.04489999999990687,
+       "grammar_per_token_s": 0.0003203703703789934
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-27 00:00\"},\n  {\"name\": \"Submission Start\", \"kind\": \"start\", \"taiwan_time\": \"2026-09-22 22:15\"}\n]}",
+     "ms": 8016,
+     "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 273,
+      "total_tokens": 363,
+      "extra": {
+       "e2e_latency_s": 8.015,
+       "prefill_tokens_per_s": 393.42844790307686,
+       "decode_tokens_per_s": 12.208169871881704,
+       "time_to_first_token_s": 0.6939000000001397,
+       "time_per_output_token_s": 0.08191235955056916,
+       "grammar_init_s": 0.019399999999906867,
+       "grammar_per_token_s": 0.00019444444445479244
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "pumpkin",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"October 23\", \"time\": \"11:45pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Winner Announcement\", \"kind\": \"results\", \"date\": \"October 26\", \"time\": \"5:00pm\", \"zone\": \"EDT\"}\n]}",
+     "ms": 8616,
+     "usage": {
+      "completion_tokens": 95,
+      "prompt_tokens": 270,
+      "total_tokens": 365,
+      "extra": {
+       "e2e_latency_s": 8.615,
+       "prefill_tokens_per_s": 334.28253064258456,
+       "decode_tokens_per_s": 12.096566634065196,
+       "time_to_first_token_s": 0.8076999999999535,
+       "time_per_output_token_s": 0.0826680851063884,
+       "grammar_init_s": 0.0860999999998603,
+       "grammar_per_token_s": 0.000261052631589241
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submissions End\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-24 00:45\"},\n  {\"name\": \"Winners Announced\", \"kind\": \"results\", \"taiwan_time\": \"2026-10-27 01:00\"}\n]}",
+     "ms": 8146,
+     "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 210,
+      "total_tokens": 303,
+      "extra": {
+       "e2e_latency_s": 8.145,
+       "prefill_tokens_per_s": 348.6055776891622,
+       "decode_tokens_per_s": 12.248375758865699,
+       "time_to_first_token_s": 0.6024000000001397,
+       "time_per_output_token_s": 0.08164347826087663,
+       "grammar_init_s": 0.04080000000004656,
+       "grammar_per_token_s": 0.0002139784946176473
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "pumpkin-results",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"October 23\", \"time\": \"11:45pm\", \"zone\": \"EDT\"},\n  {\"name\": \"Winner Announcement\", \"kind\": \"results\", \"date\": \"October 26\", \"time\": \"5:00pm\", \"zone\": \"EDT\"}\n]}",
+     "ms": 9643,
+     "usage": {
+      "completion_tokens": 95,
+      "prompt_tokens": 270,
+      "total_tokens": 365,
+      "extra": {
+       "e2e_latency_s": 9.643,
+       "prefill_tokens_per_s": 326.1657405171065,
+       "decode_tokens_per_s": 10.726552782627211,
+       "time_to_first_token_s": 0.8277999999998137,
+       "time_per_output_token_s": 0.0932265957446838,
+       "grammar_init_s": 0.07129999999981373,
+       "grammar_per_token_s": 0.00033052631578604286
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submissions End\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-24 00:45\"},\n  {\"name\": \"Winners Announced\", \"kind\": \"results\", \"taiwan_time\": \"2026-10-27 01:00\"}\n]}",
+     "ms": 7720,
+     "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 210,
+      "total_tokens": 303,
+      "extra": {
+       "e2e_latency_s": 7.72,
+       "prefill_tokens_per_s": 343.4178250204415,
+       "decode_tokens_per_s": 13.000409795527963,
+       "time_to_first_token_s": 0.6115,
+       "time_per_output_token_s": 0.0769206521739024,
+       "grammar_init_s": 0.04469999999995344,
+       "grammar_per_token_s": 0.00018602150539186605
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "hacknation",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Project Submission Window\", \"kind\": \"deadline\", \"date\": \"January 31\", \"time\": \"9:00 AM\", \"zone\": \"ET\"},\n  {\"name\": \"Finalist Ceremony\", \"kind\": \"event\", \"date\": \"February 6\", \"time\": \"12:00-1:00 PM\", \"zone\": \"ET\"}\n]}",
+     "ms": 8795,
+     "usage": {
+      "completion_tokens": 99,
+      "prompt_tokens": 282,
+      "total_tokens": 381,
+      "extra": {
+       "e2e_latency_s": 8.794,
+       "prefill_tokens_per_s": 362.8876592458708,
+       "decode_tokens_per_s": 12.269016976315648,
+       "time_to_first_token_s": 0.7771000000000932,
+       "time_per_output_token_s": 0.0815061224489639,
+       "grammar_init_s": 0.044200000000186264,
+       "grammar_per_token_s": 0.00029696969694288617
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Project Submission Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-01-31 22:00\"},\n  {\"name\": \"Finalist Pitches and Award Ceremony\", \"kind\": \"event\", \"taiwan_time\": \"2026-02-06 01:00\"}\n]}",
+     "ms": 8530,
+     "usage": {
+      "completion_tokens": 98,
+      "prompt_tokens": 222,
+      "total_tokens": 320,
+      "extra": {
+       "e2e_latency_s": 8.53,
+       "prefill_tokens_per_s": 385.6845031271092,
+       "decode_tokens_per_s": 12.252425222315221,
+       "time_to_first_token_s": 0.5756000000000931,
+       "time_per_output_token_s": 0.08161649484533967,
+       "grammar_init_s": 0.02560000000009313,
+       "grammar_per_token_s": 0.0002775510204005608
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "hacknation-finals",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Project Submission Window\", \"kind\": \"deadline\", \"date\": \"January 31\", \"time\": \"9:00 AM\", \"zone\": \"ET\"},\n  {\"name\": \"Finalist Ceremony\", \"kind\": \"event\", \"date\": \"February 6\", \"time\": \"12:00-1:00 PM\", \"zone\": \"ET\"}\n]}",
+     "ms": 55977,
+     "usage": {
+      "completion_tokens": 99,
+      "prompt_tokens": 282,
+      "total_tokens": 381,
+      "extra": {
+       "e2e_latency_s": 55.975,
+       "prefill_tokens_per_s": 6.810228867159436,
+       "decode_tokens_per_s": 6.753404267048814,
+       "time_to_first_token_s": 41.40830000000028,
+       "time_per_output_token_s": 0.148073469387757,
+       "grammar_init_s": 1.8598999999999068,
+       "grammar_per_token_s": 0.0003050505050335719
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Project Submission Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-01-31 22:00\"},\n  {\"name\": \"Finalist Pitches and Award Ceremony\", \"kind\": \"event\", \"taiwan_time\": \"2026-02-06 01:00\"}\n]}",
+     "ms": 8354,
+     "usage": {
+      "completion_tokens": 98,
+      "prompt_tokens": 222,
+      "total_tokens": 320,
+      "extra": {
+       "e2e_latency_s": 8.354,
+       "prefill_tokens_per_s": 377.35849056615723,
+       "decode_tokens_per_s": 12.548999314333484,
+       "time_to_first_token_s": 0.5882999999998137,
+       "time_per_output_token_s": 0.07968762886597648,
+       "grammar_init_s": 0.14660000000009313,
+       "grammar_per_token_s": 0.00020918367348364252
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "vultr",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"Nov 8, 2026\", \"time\": \"22:00\", \"zone\": \"UTC\"}\n]}",
+     "ms": 5341,
+     "usage": {
+      "completion_tokens": 56,
+      "prompt_tokens": 260,
+      "total_tokens": 316,
+      "extra": {
+       "e2e_latency_s": 5.341,
+       "prefill_tokens_per_s": 366.04251724632996,
+       "decode_tokens_per_s": 11.933174224341263,
+       "time_to_first_token_s": 0.7102999999998137,
+       "time_per_output_token_s": 0.08380000000001694,
+       "grammar_init_s": 0.035,
+       "grammar_per_token_s": 0.0002803571428604688
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-09 06:00\"}\n]}",
+     "ms": 4598,
+     "usage": {
+      "completion_tokens": 51,
+      "prompt_tokens": 200,
+      "total_tokens": 251,
+      "extra": {
+       "e2e_latency_s": 4.597,
+       "prefill_tokens_per_s": 331.6749585406302,
+       "decode_tokens_per_s": 12.568498315820635,
+       "time_to_first_token_s": 0.603,
+       "time_per_output_token_s": 0.07956400000000373,
+       "grammar_init_s": 0.03639999999990687,
+       "grammar_per_token_s": 0.00019411764711178107
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ai-philosophy",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Final Submission Deadline\", \"kind\": \"deadline\", \"date\": \"October 31, 2026\", \"time\": \"11:59pm\", \"zone\": \"Anywhere on Earth\"}\n]}",
+     "ms": 5329,
+     "usage": {
+      "completion_tokens": 62,
+      "prompt_tokens": 258,
+      "total_tokens": 320,
+      "extra": {
+       "e2e_latency_s": 5.328,
+       "prefill_tokens_per_s": 333.3764052201522,
+       "decode_tokens_per_s": 13.450937155456172,
+       "time_to_first_token_s": 0.7739000000003725,
+       "time_per_output_token_s": 0.0743442622950896,
+       "grammar_init_s": 0.051,
+       "grammar_per_token_s": 0.0002645161290382665
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-01 07:59\"}\n]}",
+     "ms": 4801,
+     "usage": {
+      "completion_tokens": 50,
+      "prompt_tokens": 198,
+      "total_tokens": 248,
+      "extra": {
+       "e2e_latency_s": 4.801,
+       "prefill_tokens_per_s": 345.1281157401018,
+       "decode_tokens_per_s": 11.634809450314616,
+       "time_to_first_token_s": 0.5736999999997207,
+       "time_per_output_token_s": 0.08594897959183671,
+       "grammar_init_s": 0.0376999999997206,
+       "grammar_per_token_s": 0.00024000000004656614
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "anitya",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Window\", \"kind\": \"start\", \"date\": \"2026-09-09 11:00:00\", \"time\": \"11:00:00\", \"zone\": \"\"},\n  {\"name\": \"Submission Window\", \"kind\": \"start\", \"date\": \"2026-10-28 23:59:59\", \"time\": \"23:59:59\", \"zone\": \"\"},\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"28 October\", \"time\": \"23:59\", \"zone\": \"UTC\"}\n]}",
+     "ms": 11584,
+     "usage": {
+      "completion_tokens": 166,
+      "prompt_tokens": 300,
+      "total_tokens": 466,
+      "extra": {
+       "e2e_latency_s": 11.584,
+       "prefill_tokens_per_s": 356.1253561253955,
+       "decode_tokens_per_s": 15.439029867509499,
+       "time_to_first_token_s": 0.8423999999999069,
+       "time_per_output_token_s": 0.06477090909089044,
+       "grammar_init_s": 0.023199999999720604,
+       "grammar_per_token_s": 0.00022108433733929867
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submissions Open\", \"kind\": \"start\", \"taiwan_time\": \"2026-09-09 19:00\"},\n  {\"name\": \"Submissions Close\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-29 03:59\"}\n]}",
+     "ms": 7738,
+     "usage": {
+      "completion_tokens": 94,
+      "prompt_tokens": 240,
+      "total_tokens": 334,
+      "extra": {
+       "e2e_latency_s": 7.738,
+       "prefill_tokens_per_s": 382.28735266019623,
+       "decode_tokens_per_s": 13.136335386179836,
+       "time_to_first_token_s": 0.6277999999998137,
+       "time_per_output_token_s": 0.07612473118279671,
+       "grammar_init_s": 0.0395,
+       "grammar_per_token_s": 0.00020851063828400152
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "desall-horeca",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Upload Phase\", \"kind\": \"start\", \"date\": \"July 31, 2026\", \"time\": \"1:59 PM\", \"zone\": \"UTC\"},\n  {\"name\": \"Upload Phase\", \"kind\": \"start\", \"date\": \"October 29, 2026\", \"time\": \"1:59 PM\", \"zone\": \"UTC\"}\n]}",
+     "ms": 8973,
+     "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 269,
+      "total_tokens": 373,
+      "extra": {
+       "e2e_latency_s": 8.973,
+       "prefill_tokens_per_s": 362.533692722372,
+       "decode_tokens_per_s": 12.566799248431908,
+       "time_to_first_token_s": 0.742,
+       "time_per_output_token_s": 0.07957475728155525,
+       "grammar_init_s": 0.038799999999813733,
+       "grammar_per_token_s": 0.00026346153847407543
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Upload Phase\", \"kind\": \"start\", \"taiwan_time\": \"2026-08-30 09:59\"},\n  {\"name\": \"Upload Phase\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-29 17:59\"}\n]}",
+     "ms": 7969,
+     "usage": {
+      "completion_tokens": 92,
+      "prompt_tokens": 209,
+      "total_tokens": 301,
+      "extra": {
+       "e2e_latency_s": 7.968,
+       "prefill_tokens_per_s": 360.09648518269046,
+       "decode_tokens_per_s": 12.37590099279128,
+       "time_to_first_token_s": 0.5803999999999069,
+       "time_per_output_token_s": 0.08080219780220288,
+       "grammar_init_s": 0.026700000000186266,
+       "grammar_per_token_s": 0.00020543478258237556
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "desall-perfume",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Upload Phase\", \"kind\": \"start\", \"date\": \"28 July 2026\", \"time\": \"1:59 PM\", \"zone\": \"UTC\"},\n  {\"name\": \"Upload Phase\", \"kind\": \"deadline\", \"date\": \"26 November 2026\", \"time\": \"1:59 PM\", \"zone\": \"UTC\"}\n]}",
+     "ms": 17433,
+     "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 268,
+      "total_tokens": 368,
+      "extra": {
+       "e2e_latency_s": 17.433,
+       "prefill_tokens_per_s": 22.55512539976435,
+       "decode_tokens_per_s": 17.913364455531426,
+       "time_to_first_token_s": 11.882,
+       "time_per_output_token_s": 0.05582424242427628,
+       "grammar_init_s": 0.4358000000002794,
+       "grammar_per_token_s": 0.00011200000002514564
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Upload Phase\", \"kind\": \"start\", \"taiwan_time\": \"2026-07-28 01:59\"},\n  {\"name\": \"Upload Phase\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-26 13:59\"}\n]}",
+     "ms": 3737,
+     "usage": {
+      "completion_tokens": 92,
+      "prompt_tokens": 208,
+      "total_tokens": 300,
+      "extra": {
+       "e2e_latency_s": 3.737,
+       "prefill_tokens_per_s": 445.96912521449724,
+       "decode_tokens_per_s": 27.968159326295822,
+       "time_to_first_token_s": 0.4663999999999069,
+       "time_per_output_token_s": 0.03575494505495735,
+       "grammar_init_s": 0.0295,
+       "grammar_per_token_s": 0.00007173913041554882
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "renderjuice",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadlines\", \"kind\": \"deadline\", \"date\": \"October 15-31, 2026\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Voting Closing\", \"kind\": \"deadline\", \"date\": \"November 3, 2026\", \"time\": \"23:59\", \"zone\": \"UTC\"},\n  {\"name\": \"Voting Winning\", \"kind\": \"results\", \"date\": \"November 3, 2026\", \"time\": \"23:59\", \"zone\": \"UTC\"},\n  {\"name\": \"Submissions Run\", \"kind\": \"start\", \"date\": \"October 15, 2026\", \"time\": \"00:00\", \"zone\": \"UTC\"},\n  {\"name\": \"Submissions Run End\", \"kind\": \"deadline\", \"date\": \"October 31, 2026\", \"time\": \"23:59\", \"zone\": \"UTC\"},\n  {\"name\": \"Speed Contest Start\", \"kind\": \"start\", \"date\": \"October 15, 2026\", \"time\": \"00:00\", \"zone\": \"UTC\"},\n  {\"name\": \"Speed Contest Run End\", \"kind\": \"deadline\", \"date\": \"October 31, 2026\", \"time\": \"23:59\", \"zone\": \"UTC\"}\n]}",
+     "ms": 15362,
+     "usage": {
+      "completion_tokens": 339,
+      "prompt_tokens": 457,
+      "total_tokens": 796,
+      "extra": {
+       "e2e_latency_s": 15.362,
+       "prefill_tokens_per_s": 355.752763506124,
+       "decode_tokens_per_s": 24.19245166878006,
+       "time_to_first_token_s": 1.2846000000000932,
+       "time_per_output_token_s": 0.04133520710058843,
+       "grammar_init_s": 0.007,
+       "grammar_per_token_s": 0.00011858407078602032
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submissions Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-31 11:59\"},\n  {\"name\": \"Public Voting Closes\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-03 17:59\"},\n  {\"name\": \"Submission Start\", \"kind\": \"start\", \"taiwan_time\": \"2026-10-15 08:00\"},\n  {\"name\": \"Submission End\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-31 23:59\"}\n]}",
+     "ms": 9286,
+     "usage": {
+      "completion_tokens": 174,
+      "prompt_tokens": 397,
+      "total_tokens": 571,
+      "extra": {
+       "e2e_latency_s": 9.287,
+       "prefill_tokens_per_s": 367.218573674929,
+       "decode_tokens_per_s": 21.19111198214994,
+       "time_to_first_token_s": 1.0811000000000932,
+       "time_per_output_token_s": 0.04718959537575645,
+       "grammar_init_s": 0.006699999999720603,
+       "grammar_per_token_s": 0.00009540229884843365
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "bound-jam",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Feed\", \"kind\": \"start\", \"date\": \"2026-10-01 16:52:48 to 2026-11-01 17:55:25\", \"time\": \"16:52:48 to 17:55:25\", \"zone\": \"\"},\n  {\"name\": \"Submission Feed\", \"kind\": \"other\", \"date\": \"October 1 - November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Schedule\", \"kind\": \"event\", \"date\": \"Oct 1, 18:00 CEST\", \"time\": \"18:00\", \"zone\": \"CEST\"},\n  {\"name\": \"Jam Start\", \"kind\": \"event\", \"date\": \"Oct 1 - Nov 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Build Your Game\", \"kind\": \"other\", \"date\": \"Nov 1, 18:00 CET\", \"time\": \"18:00\", \"zone\": \"CET\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"any time before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\", \"date\": \"between October 1 and November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Joining After Jam\", \"kind\": \"other\", \"date\": \"before submissions close on November 1\", \"time\": \"\", \"zone\": \"\"},\n  {\"name\": \"Game Creation Window\", \"kind\": \"other\",",
+     "ms": 80202,
+     "usage": {
+      "completion_tokens": 900,
+      "prompt_tokens": 395,
+      "total_tokens": 1295,
+      "extra": {
+       "e2e_latency_s": 80.202,
+       "prefill_tokens_per_s": 346.79543459174715,
+       "decode_tokens_per_s": 11.499516483066571,
+       "time_to_first_token_s": 1.139,
+       "time_per_output_token_s": 0.08696017797552914,
+       "grammar_init_s": 0.0445,
+       "grammar_per_token_s": 0.0003083333333240216
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Open\", \"kind\": \"start\", \"taiwan_time\": \"2026-10-01 08:00\"},\n  {\"name\": \"Submission Close\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-01 09:55\"},\n  {\"name\": \"Jam Start\", \"kind\": \"event\", \"taiwan_time\": \"2026-10-01 22:00\"}\n]}",
+     "ms": 12623,
+     "usage": {
+      "completion_tokens": 132,
+      "prompt_tokens": 335,
+      "total_tokens": 467,
+      "extra": {
+       "e2e_latency_s": 12.623,
+       "prefill_tokens_per_s": 362.82898299584923,
+       "decode_tokens_per_s": 11.24309107762419,
+       "time_to_first_token_s": 0.9232999999998137,
+       "time_per_output_token_s": 0.08894351145035044,
+       "grammar_init_s": 0.047,
+       "grammar_per_token_s": 0.00021666666666384448
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "gemma4-paper",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"2026-11-12\", \"time\": \"23:59\", \"zone\": \"UTC\"}\n]}",
+     "ms": 7244,
+     "usage": {
+      "completion_tokens": 57,
+      "prompt_tokens": 257,
+      "total_tokens": 314,
+      "extra": {
+       "e2e_latency_s": 7.244,
+       "prefill_tokens_per_s": 326.39065278134416,
+       "decode_tokens_per_s": 8.695787201666004,
+       "time_to_first_token_s": 0.7873999999999068,
+       "time_per_output_token_s": 0.11499821428569601,
+       "grammar_init_s": 0.048,
+       "grammar_per_token_s": 0.0003122807017674571
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-13 07:59\"}\n]}",
+     "ms": 4455,
+     "usage": {
+      "completion_tokens": 49,
+      "prompt_tokens": 197,
+      "total_tokens": 246,
+      "extra": {
+       "e2e_latency_s": 4.455,
+       "prefill_tokens_per_s": 369.53667229438696,
+       "decode_tokens_per_s": 12.27621483376544,
+       "time_to_first_token_s": 0.5330999999996274,
+       "time_per_output_token_s": 0.08145833333329452,
+       "grammar_init_s": 0.0796999999997206,
+       "grammar_per_token_s": 0.00016734693881732476
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "zindi-bias",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"2026-10-31\", \"time\": \"23:59\", \"zone\": \"UTC\"}\n]}",
+     "ms": 5992,
+     "usage": {
+      "completion_tokens": 57,
+      "prompt_tokens": 257,
+      "total_tokens": 314,
+      "extra": {
+       "e2e_latency_s": 5.992,
+       "prefill_tokens_per_s": 349.32717140151914,
+       "decode_tokens_per_s": 10.688246745807927,
+       "time_to_first_token_s": 0.7356999999997206,
+       "time_per_output_token_s": 0.09356071428573758,
+       "grammar_init_s": 0.028399999999906868,
+       "grammar_per_token_s": 0.0003105263157600633
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-01 07:59\"}\n]}",
+     "ms": 4751,
+     "usage": {
+      "completion_tokens": 49,
+      "prompt_tokens": 197,
+      "total_tokens": 246,
+      "extra": {
+       "e2e_latency_s": 4.751,
+       "prefill_tokens_per_s": 334.01152933208243,
+       "decode_tokens_per_s": 11.571562884214389,
+       "time_to_first_token_s": 0.5897999999998137,
+       "time_per_output_token_s": 0.08641874999998252,
+       "grammar_init_s": 0.03679999999981374,
+       "grammar_per_token_s": 0.0002020408163246299
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "hyperbloom",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Submission Deadline\", \"kind\": \"deadline\", \"date\": \"10/19\", \"time\": \"17:00\", \"zone\": \"EDT\"}\n]}",
+     "ms": 47624,
+     "usage": {
+      "completion_tokens": 53,
+      "prompt_tokens": 252,
+      "total_tokens": 305,
+      "extra": {
+       "e2e_latency_s": 47.623,
+       "prefill_tokens_per_s": 6.695734657600871,
+       "decode_tokens_per_s": 5.2209883732601154,
+       "time_to_first_token_s": 37.63589999999991,
+       "time_per_output_token_s": 0.19153461538462976,
+       "grammar_init_s": 1.9872999999998138,
+       "grammar_per_token_s": 0.0003301886792452829
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-10-20 01:00\"}\n]}",
+     "ms": 4474,
+     "usage": {
+      "completion_tokens": 49,
+      "prompt_tokens": 192,
+      "total_tokens": 241,
+      "extra": {
+       "e2e_latency_s": 4.474,
+       "prefill_tokens_per_s": 340.60670569468715,
+       "decode_tokens_per_s": 12.336477421677989,
+       "time_to_first_token_s": 0.5636999999997206,
+       "time_per_output_token_s": 0.08106041666665503,
+       "grammar_init_s": 0.1436999999997206,
+       "grammar_per_token_s": 0.00016938775513625272
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "ugreen-nas",
+   "reader": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"First Round Deadline\", \"kind\": \"deadline\", \"date\": \"2026-11-15\", \"time\": \"23:45\", \"zone\": \"PST\"}\n]}",
+     "ms": 5890,
+     "usage": {
+      "completion_tokens": 59,
+      "prompt_tokens": 261,
+      "total_tokens": 320,
+      "extra": {
+       "e2e_latency_s": 5.889,
+       "prefill_tokens_per_s": 310.27104136957524,
+       "decode_tokens_per_s": 11.53379601089168,
+       "time_to_first_token_s": 0.8411999999997206,
+       "time_per_output_token_s": 0.0867017241379744,
+       "grammar_init_s": 0.0485,
+       "grammar_per_token_s": 0.00037796610172332847
+      }
+     }
+    }
+   ],
+   "baseline": [
+    {
+     "text": "{\"events\": [\n  {\"name\": \"Round One Deadline\", \"kind\": \"deadline\", \"taiwan_time\": \"2026-11-16 07:45\"}\n]}",
+     "ms": 5471,
+     "usage": {
+      "completion_tokens": 52,
+      "prompt_tokens": 201,
+      "total_tokens": 253,
+      "extra": {
+       "e2e_latency_s": 5.472,
+       "prefill_tokens_per_s": 337.3615307148468,
+       "decode_tokens_per_s": 10.49404308730954,
+       "time_to_first_token_s": 0.5958000000002794,
+       "time_per_output_token_s": 0.09529215686271589,
+       "grammar_init_s": 0.0405,
+       "grammar_per_token_s": 0.00021923076920211303
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "model": "gemma-4-E2B-it-q4f16_1-MLC",
+ "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+ "at": "2026-10-24T03:51:41.172Z"
+}

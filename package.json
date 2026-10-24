@@ -1,0 +1,25 @@
+{
+  "name": "deadline-calendar",
+  "version": "1.0.0",
+  "description": "Paste a contest rules page. Gemma finds the dates in your browser, code converts the time zones and writes a calendar file.",
+  "scripts": {
+    "dev": "vite --port 5179",
+    "build": "vite build",
+    "preview": "vite preview --port 5179",
+    "test": "vitest run",
+    "score": "node scripts/score.mjs"
+  },
+  "author": "Hua-I Yu",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.86",
+    "luxon": "^3.7.2"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1",
+    "vite": "^7.3.7",
+    "vitest": "^3.2.7"
+  }
+}
