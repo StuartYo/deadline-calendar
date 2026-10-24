@@ -2,7 +2,7 @@
 
 Paste a contest rules page. Gemma 4 E2B runs in your browser and points at the dates. Plain code checks every quote against the page, converts the time zones with Luxon and writes an `.ics` file, or one Google Calendar link per date.
 
-Live: https://deadline-calendar.vercel.app
+Live: https://deadline-calendar-murex.vercel.app
 
 ## How it works
 

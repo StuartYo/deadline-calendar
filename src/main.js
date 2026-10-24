@@ -147,6 +147,10 @@ function setMode(mode) {
     $('text').readOnly = false;
     if (state.ex && $('text').value === state.ex.excerpt) $('text').value = '';
     state.ex = null;
+    state.rows = [];
+    $('icsLabel').textContent = 'Download .ics';
+    $('excerptSum').textContent = 'What Gemma reads';
+    $('excerpt').textContent = '';
     $('srcTag').textContent = '';
     $('rows').innerHTML = '<p class="empty">Paste a rules page and press Find the dates.</p>';
     $('dropped').innerHTML = '';
